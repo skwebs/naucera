@@ -21,6 +21,11 @@ class Home extends BaseController
 
 	public function worklist()
 	{
-		return view('home/workList');
+		return view('home/work_list');
+	}
+
+	public function dailyStockUpdate()
+	{
+		return view('home/daily_stock_update');
 	}
 }
