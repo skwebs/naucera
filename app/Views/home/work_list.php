@@ -10,6 +10,11 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
    <!-- Font Awesome Icons -->
    <link rel="stylesheet" href="<?= base_url("assets/static") ?>/plugins/fontawesome-free/css/all.min.css">
+   <!-- DataTables -->
+   <link rel="stylesheet" href="<?= base_url("assets/static") ?>/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+   <link rel="stylesheet" href="<?= base_url("assets/static") ?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+   <link rel="stylesheet" href="<?= base_url("assets/static") ?>/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
    <!-- IonIcons -->
    <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
    <!-- Theme style -->
@@ -125,19 +130,7 @@
 
    <!-- REQUIRED SCRIPTS -->
 
-   <!-- jQuery -->
-   <script src="<?= base_url("assets/static") ?>/plugins/jquery/jquery.min.js"></script>
-   <!-- Bootstrap -->
-   <script src="<?= base_url("assets/static") ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-   <!-- AdminLTE -->
-   <script src="<?= base_url("assets/static") ?>/dist/js/adminlte.js"></script>
-
-   <!-- OPTIONAL SCRIPTS -->
-   <script src="<?= base_url("assets/static") ?>/plugins/chart.js/Chart.min.js"></script>
-   <!-- AdminLTE for demo purposes -->
-   <script src="<?= base_url("assets/static") ?>/dist/js/demo.js"></script>
-   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-   <script src="<?= base_url("assets/static") ?>/dist/js/pages/dashboard3.js"></script>
+   <?= $this->include("templates/partials/js-files") ?>
 </body>
 
 </html>
