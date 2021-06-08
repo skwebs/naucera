@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Naucera CRM | Dashboard</title>
+   <title>Naucera CRM | Work List</title>
 
    <!-- Google Font: Source Sans Pro -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -118,14 +118,8 @@
       </aside>
       <!-- /.control-sidebar -->
 
-      <!-- Main Footer -->
-      <footer class="main-footer">
-         <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-         All rights reserved.
-         <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 3.1.0
-         </div>
-      </footer>
+      <!-- include Main Footer -->
+      <?= $this->include('templates/partials/footer') ?>
    </div>
    <!-- ./wrapper -->
 

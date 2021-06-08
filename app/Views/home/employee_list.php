@@ -10,6 +10,12 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
    <!-- Font Awesome Icons -->
    <link rel="stylesheet" href="<?= base_url("assets/static") ?>/plugins/fontawesome-free/css/all.min.css">
+   <!-- DataTables -->
+   <link rel="stylesheet" href="<?= base_url("assets/static") ?>/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+   <link rel="stylesheet" href="<?= base_url("assets/static") ?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+   <link rel="stylesheet" href="<?= base_url("assets/static") ?>/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+   <!-- Theme style -->
+
    <!-- IonIcons -->
    <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
    <!-- Theme style -->
@@ -41,12 +47,12 @@
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-6">
-                     <h1 class="m-0">Dashboard</h1>
+                     <h1 class="m-0">Employee List</h1>
                   </div><!-- /.col -->
                   <div class="col-sm-6">
                      <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Employee List</li>
                      </ol>
                   </div><!-- /.col -->
                </div><!-- /.row -->
@@ -119,14 +125,9 @@
       </aside>
       <!-- /.control-sidebar -->
 
-      <!-- Main Footer -->
-      <footer class="main-footer">
-         <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-         All rights reserved.
-         <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 3.1.0
-         </div>
-      </footer>
+      <!-- include Main Footer -->
+      <?= $this->include('templates/partials/footer') ?>
+
    </div>
    <!-- ./wrapper -->
 
@@ -136,15 +137,48 @@
    <script src="<?= base_url("assets/static") ?>/plugins/jquery/jquery.min.js"></script>
    <!-- Bootstrap -->
    <script src="<?= base_url("assets/static") ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <!-- DataTables  & Plugins -->
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables/jquery.dataTables.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/jszip/jszip.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/pdfmake/pdfmake.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/pdfmake/vfs_fonts.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+   <script src="<?= base_url("assets/static") ?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
    <!-- AdminLTE -->
    <script src="<?= base_url("assets/static") ?>/dist/js/adminlte.js"></script>
 
    <!-- OPTIONAL SCRIPTS -->
-   <script src="<?= base_url("assets/static") ?>/plugins/chart.js/Chart.min.js"></script>
+   <!-- <script src="<?= base_url("assets/static") ?>/plugins/chart.js/Chart.min.js"></script> -->
    <!-- AdminLTE for demo purposes -->
    <script src="<?= base_url("assets/static") ?>/dist/js/demo.js"></script>
    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
    <script src="<?= base_url("assets/static") ?>/dist/js/pages/dashboard3.js"></script>
+   <!-- Page specific script -->
+   <script>
+      $(function() {
+         $("#example1").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+         $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+         });
+      });
+   </script>
 </body>
 
 </html>

@@ -28,4 +28,14 @@ class Home extends BaseController
 	{
 		return view('home/daily_stock_update');
 	}
+
+	public function targetSaleCTC()
+	{
+		return view('home/target_sale_ctc');
+	}
+
+	public function targetSalePremix()
+	{
+		return view('home/target_sale_premix');
+	}
 }

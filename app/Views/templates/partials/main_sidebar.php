@@ -86,19 +86,19 @@
             </li>
             <li class="nav-item">
                <a href="<?= site_url('home/staffWiseReports') ?>" class="nav-link">
-                  <i class="nav-icon far fa-building"></i>
+                  <i class="nav-icon far fa-file-alt"></i>
                   <p>Staff Wise Reports</p>
                </a>
             </li>
             <li class="nav-item">
                <a href="<?= site_url('home/leadReports') ?>" class="nav-link">
-                  <i class="nav-icon far fa-building"></i>
+                  <i class="nav-icon far fa-file-alt"></i>
                   <p>Lead Reports</p>
                </a>
             </li>
             <li class="nav-item">
                <a href="<?= site_url('home/masterReports') ?>" class="nav-link">
-                  <i class="nav-icon far fa-building"></i>
+                  <i class="nav-icon far fa-file-alt"></i>
                   <p>Master Reports</p>
                </a>
             </li>
@@ -124,7 +124,7 @@
             </li>
             <li class="nav-item">
                <a href="<?= site_url('home/nauceraGita') ?>" class="nav-link">
-                  <i class="nav-icon far fa-building"></i>
+                  <i class="nav-icon fas fa-book"></i>
                   <p>Naucera Gita</p>
                </a>
             </li>
